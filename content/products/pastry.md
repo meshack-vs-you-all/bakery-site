@@ -1,0 +1,7 @@
+---
+title: "Artisan pastry"
+date: 2026-02-18
+draft: false
+price: "$5.00"
+---
+Delicious fresh pastry made with love.

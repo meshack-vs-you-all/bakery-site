@@ -1,0 +1,59 @@
+{{ define "main" }}
+<div class="hero">
+    <h1>{{ .Title }}</h1>
+    <p>Freshly baked artisanal bread and pastries delivered to your door.</p>
+    <a href="/menu/" class="btn">View Our Menu</a>
+</div>
+
+<section class="container">
+    <h2>Our Specialties</h2>
+    <div class="grid">
+        {{ range (where .Site.RegularPages "Section" "products") | first 3 }}
+        <div class="card">
+            <h3>{{ .Title }}</h3>
+            <p>{{ .Params.price }}</p>
+            <a href="{{ .Permalink }}">View Details</a>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+<section class="pricing container">
+    <h2>Daily Deals</h2>
+    <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
+        <tr style="background: #efebe9;">
+            <th style="padding: 10px; border: 1px solid #ddd;">Item</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Price</th>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">Sourdough</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">$6.00</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">Croissant Bundle</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">$12.00</td>
+        </tr>
+    </table>
+</section>
+
+<section class="testimonials container">
+    <h2>What Our Customers Say</h2>
+    <div style="font-style: italic; border-left: 4px solid #8d6e63; padding-left: 1rem; margin-top: 1rem;">
+        "Best Sourdough in the city! I come here every morning." - Jane Doe
+    </div>
+</section>
+
+<section class="hours container">
+    <h2>Opening Hours</h2>
+    <p>Mon - Fri: 07:00 AM - 06:00 PM</p>
+    <p>Sat - Sun: 08:00 AM - 04:00 PM</p>
+</section>
+
+<section class="cta container"
+    style="background: #8d6e63; color: white; padding: 2rem; text-align: center; margin-top: 2rem; border-radius: 8px;">
+    <h2>Hungry?</h2>
+    <p>Order online for pickup or delivery.</p>
+    <a href="/contact/" class="btn" style="background: white; color: #8d6e63;">Contact Us Now</a>
+</section>
+
+{{ end }}
