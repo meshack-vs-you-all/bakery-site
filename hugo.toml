@@ -1,9 +1,17 @@
-baseURL = 'http://localhost:1313/'
-languageCode = 'en-us'
-title = 'The Artisan Bakery'
+baseURL = 'https://meshack-vs-you-all.github.io/bakery-site/'
+languageCode = 'en-KE'
+title = 'The Artisan Bakery & Cafe | Fresh Daily in Nairobi'
 theme = 'minimal-bakery'
-canonifyURLs = true
+canonifyURLs = false
 enableRobotsTXT = true
+
+[params]
+  description = "The Artisan Bakery & Cafe offers the freshest artisan breads, custom cakes, and premium Kenyan coffee in Nairobi. Experience the art of baking with locally sourced ingredients."
+  keywords = ["Bakery Nairobi", "Artisan Bread Kenya", "Custom Cakes Nairobi", "Cafe Westlands", "Fresh Pastries Kenya", "The Artisan Bakery"]
+  footer = "© 2026 The Artisan Bakery & Cafe. Crafted with Love in Nairobi."
+  phone = "+254 744 000 000"
+  email = "orders@artisanbakery.co.ke"
+  address = "Sarit Centre, Westlands, Nairobi, Kenya"
 
 [menu]
   [[menu.main]]
@@ -11,14 +19,18 @@ enableRobotsTXT = true
     url = '/'
     weight = 1
   [[menu.main]]
-    name = 'Menu'
+    name = 'Bakery Menu'
     url = '/menu/'
     weight = 2
   [[menu.main]]
-    name = 'About'
-    url = '/about/'
+    name = 'Custom Cakes'
+    url = '/products/cake/'
     weight = 3
   [[menu.main]]
-    name = 'Contact'
-    url = '/contact/'
+    name = 'About Our Story'
+    url = '/about/'
     weight = 4
+  [[menu.main]]
+    name = 'Contact & Orders'
+    url = '/contact/'
+    weight = 5
